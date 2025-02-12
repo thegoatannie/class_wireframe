@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>MySpace</title>
+    <style>
+      .main-menu {
+        border: 1px solid black;
+        height: 50px;
+        display: flex;
+/*      squeeze to left of the box it's in */
+/*      justify-content: flex-start;  */
+        justify-content: space-around;
+/*      put space between the content, with no space on thr sides  */
+/*      justify-content: space-between; */
+        align-items: center; /*vertically center*/
+      }
+      
+       main {
+        display: grid;
+/*      grid-template-columns: 50vw 50vw; */
+        grid-template-columns: 1fr 1fr; /*css specific way of specifying size */
+/*         grid-gap: 10px; */
+      }
+      
+/*       better to specify the background image in the individual divs rather than in style */
+      main > div {
+/*      width: 50vw; */
+        height: 200px;
+        background-color: beige;
+/*      margin: 10px; */
+/*      background-image: url('IMG_2444 2.PNG'); */
+        background-size: 50px;
+/*      don't repeat the photo */
+/*      background-repeat: no-repeat;  */
+/*      can change the position of the background photo */
+        background-size: cover;
+        background-position: center;
+      }
+      
+/*       changes when hover */
+      main > div:hover {
+        background-image: url('IMG_2444 2.PNG');
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    <nav class="main-menu">
+      <a href="#">first</a>
+      <a href="#">second</a>
+      <a href="#">third</a>
+    </nav>
+    
+    <main>
+      <div style="background-image: url('IMG_2444 2.PNG')"></div>
+      <div style="background-image: url('Untitled 1076455-Screenshot 1226417.png')"></div>
+      <div style="background-image: url('ducky_wallpaper.jpg')"></div>
+    </main>
+    
+  </body>
+</html>
